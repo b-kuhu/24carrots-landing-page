@@ -1,14 +1,24 @@
 :root {
-  --ff-futura: "futura-pt", sans-serif;
+  --ff-futura: "Jost", sans-serif;
   --ff-caslon: "F37 Caslon", serif;
   --wp--preset--color--vivid-red: #cf2e2e;
   --wp--preset--color--light-green-cyan: #647B4E;  
   --wp--preset--color--vivid-green-cyan: #00d084;
   --wp--preset--color--bottle-green : #1A4122;
   --wp--preset--color--red : #C15627;
+  --wp--preset--color--pale-pink: #f78da7;
+  --wp--preset--color--luminous-vivid-orange: #ff6900;
 }
 body{
     font-family: var(--ff-futura);
+}
+body p{
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 1.25rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.75rem;
 }
 .nav-items {
   display: flex;
@@ -91,8 +101,7 @@ body{
     text-transform: uppercase;
     letter-spacing: 0.25rem;
     color: var(--wp--preset--color--light-green-cyan);
-    font-size: 1.35em;
-    font-weight: 400;
+    font-size: 1.25em;
     line-height: 20px;
 }
 .about24carrots-container h1{
@@ -104,11 +113,8 @@ body{
     color: var(--wp--preset--color--bottle-green);
 }
 .about24carrots-container p{
-    font-weight: 100;
-    font-style: normal;
     letter-spacing: 0.5px;
     color: var(--wp--preset--color--bottle-green);
-    line-height: 1.5rem;
 }
 .get-in-touch-btn2{
     font-family: var(--ff-futura);
@@ -119,7 +125,11 @@ body{
     border-radius: 2rem;
     color: white;
     text-transform: uppercase;
-    background-color: var(--wp--preset--color--vivid-red);
+    background-color: var(--wp--preset--color--red);
+}
+.get-in-touch-btn2:hover{
+  background-color: var(--wp--preset--color--luminous-vivid-orange);
+
 }
 .content-slider{
     flex:1;
@@ -138,6 +148,10 @@ body{
     opacity: 0;
     transition: opacity 0.5s ease;
 }
+.slider-images img:first-child{
+    opacity: 1;
+    z-index: 1;
+}
 .slider-bars{
    margin: 1.5rem;
    display: flex;
@@ -149,9 +163,13 @@ body{
   height: 3px;
   width: 35px;
   background-color: var(--wp--preset--color--bottle-green);
+  position: relative;
 }
 .slider-images > img:target {
   opacity: 1;
   z-index: 1;
 }
-
+/* vertical image slider for event types */
+.vertical-tabs-slider-images{
+  height: 600px;
+}
