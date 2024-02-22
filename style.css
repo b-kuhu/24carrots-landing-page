@@ -20,6 +20,22 @@ body p{
   font-style: normal;
   line-height: 1.75rem;
 }
+body h1{
+  font-family: var(--ff-caslon);
+  font-size: 7rem;
+  font-weight: 500;
+  line-height: 6.5rem;
+  margin-top: 0;
+  color: var(--wp--preset--color--bottle-green);
+}
+body h3{
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: var(--wp--preset--color--light-green-cyan);
+  font-size: 1.25em;
+  font-weight: bolder;
+  line-height: 20px;
+}
 .nav-items {
   display: flex;
   column-gap: 5rem;
@@ -97,26 +113,11 @@ body p{
     font-family: var(--ff-futura);
     text-align: center;
 }
-.about24carrots-container h3{
-    text-transform: uppercase;
-    letter-spacing: 0.25rem;
-    color: var(--wp--preset--color--light-green-cyan);
-    font-size: 1.25em;
-    line-height: 20px;
-}
-.about24carrots-container h1{
-    font-family: var(--ff-caslon);
-    font-size: 7rem;
-    font-weight: 500;
-    line-height: 6.5rem;
-    margin-top: 0;
-    color: var(--wp--preset--color--bottle-green);
-}
 .about24carrots-container p{
     letter-spacing: 0.5px;
     color: var(--wp--preset--color--bottle-green);
 }
-.get-in-touch-btn2{
+.btn{
     font-family: var(--ff-futura);
     margin-top: 1.5rem ;
     padding: 1rem 2.5rem;
@@ -127,7 +128,7 @@ body p{
     text-transform: uppercase;
     background-color: var(--wp--preset--color--red);
 }
-.get-in-touch-btn2:hover{
+.btn:hover{
   background-color: var(--wp--preset--color--luminous-vivid-orange);
 
 }
@@ -170,6 +171,154 @@ body p{
   z-index: 1;
 }
 /* vertical image slider for event types */
-.vertical-tabs-slider-images{
-  height: 600px;
+.event-types-container{
+  margin: 15rem 2rem;
+}
+.vertical-tabs-slider{
+  display: flex;
+  column-gap: 3rem;
+}
+.vertical-tabs-slider-image img{
+  border-top-left-radius: 47%;
+  border-top-right-radius: 47%;
+  height: 800px;
+  width: 600px;
+}
+.wrapper{
+  display: flex;
+  gap: 6rem;
+}
+.navigation-tabs {
+  padding-left: 0;
+  margin: 0;
+  width: 200px;
+}
+.navigation-tabs li {
+  list-style-type: none;
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0;
+  cursor: pointer;
+}
+.navigation-tabs li a {
+  text-decoration: none;
+  color: lightgray;
+  font-size: 1.75rem;
+  font-weight: 300;
+  font-family: var(--ff-caslon);
+}
+.navigation-tabs li a:active{
+  color: var(--wp--preset--color--bottle-green);
+}
+.navigation-tabs li a:hover {
+  color: var(--wp--preset--color--vivid-red);
+}
+.slider-content-wrapper{
+  position: relative;
+  width: 100%;
+}
+.slider-content{
+  position: absolute;
+  left: 0;
+  opacity: 0;
+  width: 85%;
+}
+.slider-content p{
+  font-size: 1.35rem;
+  line-height: 2rem;
+  color: var(--wp--preset--color--bottle-green);
+}
+.slider-content:target{
+  opacity: 1;
+  z-index: 1;
+}
+/* circular content block styling*/
+.circular-content-block{
+  background-repeat: no-repeat;
+  background-position:center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.circular-content-block .circle-banner {
+  background-image: url(https://24carrots.com/wp-content/uploads/2023/10/unforegetable-banner.png);
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  min-height: 595px;
+  z-index: 1;
+  position: relative;
+}
+.circular-content-block .half-circle {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 345px 345px 0 0;
+  background-color: #fff;
+  display: block;
+  z-index: 2;
+  height: 316px;
+  width: 643px;
+  bottom: -292px;
+}
+.circle-content{
+  z-index: 2223;
+  width: 40%;
+  text-align: center;
+  margin-top: -3.5rem;
+}
+.circle-content h1{
+  margin-top: 2rem;
+  margin-bottom: 0;
+  font-size: 6rem;
+}
+/* scrollable slider */
+.scrollable-slider{
+  margin-top: 15rem;
+}
+.slide-images{
+  display: flex;
+}
+.scrollable-slider-slide img{
+  height: 400px;
+  width:400px;
+  padding: 0 1rem;
+}
+/* range slider styling */
+.range-slider-container{
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+.slider {
+  -webkit-appearance: none;
+  width: 25%;
+  height: 3px;
+  background: grey;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 45px;
+  height: 10px;
+  background: black;
+  border-radius: 4rem;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: black;
+  cursor: pointer;
 }
