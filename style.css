@@ -322,3 +322,13 @@ body h3{
   background: black;
   cursor: pointer;
 }
+.about-us-container{
+  width: 50%;
+  margin: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content{
+  text-align: center;
+}
