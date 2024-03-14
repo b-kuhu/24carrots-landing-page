@@ -14,32 +14,48 @@ bars.forEach((bar,index) => {
 // customer testimonials slider 
 const testimonialImage = [...document.querySelectorAll('.testimonial-slide-image')];
 const reviews = [...document.querySelectorAll('.customer-review')];
+const names = [...document.querySelectorAll('.customer-name')];
+const professions = [...document.querySelectorAll('.customer-profession')]
 const testimonialSliderBars = [...document.querySelectorAll('.testimonial-slider-bar')];
 const nextSlideBtn = document.querySelector('.next-slide-btn');
 
 const image = document.querySelector('.testimonial-slide-image');
 const review = document.querySelector('.customer-review');
+const customerName = document.querySelector('.customer-name');
+const profession = document.querySelector('.customer-profession');
+
+const img = testimonialImage[0].src;
+const rev = reviews[0].innerHTML;
+const cName = names[0].innerHTML;
+const prof = professions[0].innerHTML;
 testimonialSliderBars.forEach((bar,index) => {
     bar.addEventListener('click',()=>{
-        // console.log('bar clicked : ',index+1);
-        
+    if(index ==0)
+    {
+        image.src = img;
+        review.innerHTML = rev;
+        customerName.innerHTML = cName;
+        profession.innerHTML = prof;
+    }
         image.src = testimonialImage[index].src;
-        console.log(index ,' clicked', testimonialImage[index].src)
         review.innerHTML = reviews[index].innerHTML;
+        customerName.innerHTML = names[index].innerHTML;
+        profession.innerHTML = professions[index].innerHTML;
     })
 });
-let index=0;
+let i=0;
 nextSlideBtn.addEventListener('click',()=>{
-    if(index == testimonialSliderBars.length)
-       {
-        index = 0;
-        image.src = testimonialImage[index].src;
-        review.innerHTML = reviews[index].innerHTML;
-       }
-    else{
-    image.src = testimonialImage[index].src;
-    console.log(index ,' clicked', testimonialImage[index].src)
-    review.innerHTML = reviews[index].innerHTML;
-    index++;
-}
+    i++;
+    if(i >= testimonialSliderBars.length)
+    {
+        i = 0;
+        image.src = img;
+        review.innerHTML = rev;
+        customerName.innerHTML = cName;
+        profession.innerHTML = prof;
+    }
+    image.src = testimonialImage[i].src;
+    review.innerHTML = reviews[i].innerHTML;
+    customerName.innerHTML = names[index].innerHTML;
+    profession.innerHTML = professions[index].innerHTML;
 })
