@@ -450,7 +450,43 @@ body h3{
   margin: 0 1rem; 
   padding: 0.4rem;
 }
-
+/* Signup newsletter styling */
+.signup-newsletter{
+ display:flex;
+}
+.signup-form{
+  background-color: rgb(199, 130, 104);
+  padding: 6rem 2.5rem;
+  color: white;
+}
+.signup-form h1{
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 0;
+}
+.signup-form p:first-child{
+  font-size: 1.1rem;
+}
+.signup-form span input{
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 60%;
+}
+.signup-form span button{
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  width: 20%;
+}
+.agree-condition{
+  font-size: 0.75rem;
+}
+.signup-image img{
+  width: 700px;
+  height: 100%;
+}
 /* footer section style */
 .footer{
   background-color: rgb(200, 200, 200);
